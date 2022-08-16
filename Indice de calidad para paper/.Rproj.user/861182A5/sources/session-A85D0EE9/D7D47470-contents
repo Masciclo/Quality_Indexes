@@ -1,0 +1,26 @@
+osm_prueba <- sf::st_read("C:\\Users\\jajaj\\OneDrive\\Desktop\\Spatial Data\\Proyectos\\Avenida Matta\\Red open street\\Red_open_street.shp")
+
+
+#install.packages(c("cowplot", "googleway", "ggplot2", "ggrepel",
+#                   "ggspatial", "libwgeom", "sf", "rnaturalearth", "rnaturalearthdata"))
+library("ggplot")
+library("osmdata")
+library("ggplot2")
+theme_set(theme_bw())
+library("sf")
+library("rnaturalearth")
+library("rnaturalearthdata")
+library("ggspatial")
+
+bbx <- getbb("Boston, MA")
+
+# Mapa de tipologia
+ggplot(data = df ) +
+  geom_sf(aes(color = tipci)) +
+          scale_color_brewer(palette = "Spectral") +
+  annotation_scale(location = "bl", width_hint = 0.4, line_width = 0.5) +
+  annotation_north_arrow(location = "bl", which_north = "true",
+                         pad_x = unit(0.75, "in"), pad_y = unit(0.5, "in"),
+                         style = north_arrow_fancy_orienteering) +
+
+  geom_sf(data = osm_prueba, aes(color = "grey"))

@@ -1,0 +1,18 @@
+library(dplyr)
+library(sf)
+library(janitor)
+library(ggplot2)
+
+#Cargar funciones
+source("Data prep.R")
+source("Data calidad.R")
+
+#Directorio
+setwd("C:\\Users\\jajaj\\OneDrive\\Desktop\\Spatial Data\\Indicador de calidad ciclo\\Indicador de calidad para paper\\Indice de calidad para paper\\Data preprocesada\\")
+
+# Limpieza de variables
+#Merge.1 <- read.csv("C:\\Users\\jajaj\\OneDrive\\Desktop\\Spatial Data\\Indicador de calidad ciclo\\Indicador de calidad para paper\\Indice de calidad para paper\\Merge.1.csv")
+Merge.1 <- sf::st_read("C:\\Users\\jajaj\\OneDrive\\Desktop\\Spatial Data\\Indicador de calidad ciclo\\Indicador de calidad para paper\\Indice de calidad para paper\\Catastro_base.shp")
+
+#colnames(Merge.1)[17] <- "SEÑALIZAD"
+#colnames(Merge.1)[1] <- "FID"
