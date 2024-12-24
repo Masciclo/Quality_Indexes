@@ -4,6 +4,7 @@
 
 ![Noticia](https://github.com/user-attachments/assets/8cd390a9-727f-46a2-9fe8-5be8a7586db3)
 ![Mapa reprobadas](https://github.com/user-attachments/assets/6c0972b6-ba99-41ce-a144-5df0ab5b16de)
+![Tipos de reprobaciones](https://github.com/user-attachments/assets/a2b1cb82-87be-4844-8ecf-bea4096f159b)
 
 ## Estado del Proyecto
 
