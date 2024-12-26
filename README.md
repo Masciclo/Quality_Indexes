@@ -1,14 +1,14 @@
-![🌍 Scope](Images/cover_inventory.png)
+![🌍 Scope](Imagenes/portada_catastro.png)
 
 ## 📄 Description
 
-As part of the inventories conducted in collaboration with CEDEUS on the 🚴‍♂️ bike lanes of Greater Santiago between 2019-2022, and the research project supporting this publication [🔗 link text](URL), this 📊 data science project evaluates three bike lane quality indicators derived from:  
+As part of the inventories conducted in collaboration with CEDEUS on the 🚴‍♂️ bike lanes of Greater Santiago between 2019-2022, and the research project supporting this publication [🔗 Mora (2021)](https://drive.google.com/file/d/1twCDibGu5onrBh7RtzvahDBQUuHsvcmH/view?usp=sharing), this 📊 data science project evaluates three bike lane quality indicators direved from regulations, design manuals, and academic sources, and one custom quality indicator proposed by us:  
 - 📝 **Regulations** ([Ministry of Transport and Telecommunications, 2021](https://drive.google.com/file/d/1R5758sRyN_SN1e4AlhZG54nbbOQGZ3m_/view?usp=sharing)),  
 - 📚 **Design manuals** ([Guide for Composition and Operational Design of Bike Lanes, 2019](https://drive.google.com/file/d/12npPNzV-C_9jRNPPgI2-s5krZYxMswyf/view?usp=sharing)), and  
 - 🎓 **Academic sources** ([Merkuria, 2012](https://drive.google.com/file/d/1BRqqaboLDGDyY7uY7nbGsKPCBZhmBXlE/view?usp=sharing)).  
-
-It also proposes the same evaluation for a 🌟 custom indicator.  
-![📊 Variables](Images/variables.png)
+- 🌟 **Custom indicator** 
+ 
+![📊 Variables](Imagenes/variables.png)
 
 ---
 
