@@ -1,5 +1,5 @@
 # Contrato: Esta funcion recibe un data frame del catastro más ciclo
-# Funcion: Esta funcion reduce los valor de las tipologias a 4 categorias CA, VD, BAND, PAR
+# Funcion: Esta funcion reduce desde one hot-enconding los valor de las tipologias a una columna de 4 categorias CA, VD, BAND, PAR
 # Si hay una ciclovia por platabanda esta funcion la transforma en una ciclovias por vereda con segregacion
 #
 
