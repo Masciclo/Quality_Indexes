@@ -1,54 +1,85 @@
-![Ambito](Imagenes/portada_catastro.png)
+![🌍 Scope](Images/cover_inventory.png)
 
-## Descripción
+## 📄 Description
 
-En el marco de los catastros realizados en colaboración con CEDEUS de las ciclovías del gran Santiago entre los años 2019-2022, y del proyecto de investigación trabajado para esta publicación [texto del enlace](URL), este proyecto de data science evalúa tres indicadores de calidad de ciclovías derivados de normativas ([Ministerio de Transportes y Telecomunicaciones, 2021](https://drive.google.com/file/d/1R5758sRyN_SN1e4AlhZG54nbbOQGZ3m_/view?usp=sharing)), manuales de diseño ([Guía de composición y diseño operacional de ciclovías, 2019](https://drive.google.com/file/d/12npPNzV-C_9jRNPPgI2-s5krZYxMswyf/view?usp=sharing)) y academia ([Merkuria, 2012](https://drive.google.com/file/d/1BRqqaboLDGDyY7uY7nbGsKPCBZhmBXlE/view?usp=sharing)), y propone la misma evaluación para un indicador propio.  
-![Variables](Imagenes/variables.png)
+As part of the inventories conducted in collaboration with CEDEUS on the 🚴‍♂️ bike lanes of Greater Santiago between 2019-2022, and the research project supporting this publication [🔗 link text](URL), this 📊 data science project evaluates three bike lane quality indicators derived from:  
+- 📝 **Regulations** ([Ministry of Transport and Telecommunications, 2021](https://drive.google.com/file/d/1R5758sRyN_SN1e4AlhZG54nbbOQGZ3m_/view?usp=sharing)),  
+- 📚 **Design manuals** ([Guide for Composition and Operational Design of Bike Lanes, 2019](https://drive.google.com/file/d/12npPNzV-C_9jRNPPgI2-s5krZYxMswyf/view?usp=sharing)), and  
+- 🎓 **Academic sources** ([Merkuria, 2012](https://drive.google.com/file/d/1BRqqaboLDGDyY7uY7nbGsKPCBZhmBXlE/view?usp=sharing)).  
 
-## Resultados
+It also proposes the same evaluation for a 🌟 custom indicator.  
+![📊 Variables](Images/variables.png)
 
-A partir desde una archivo shapefile con las variables mostrada en la fig.1 se producen la siguiente lista de tablas, gráficos y mapas:
+---
 
-### Tablas
+## 🎯 Results
 
-- 1.a Km totales ciclovias y cruces
-- 1.b Km totales ciclovias y cruces por comuna
-- 2.a Km totales por tipologia
-- 2.b Km totales por tipologia por comuna
-- 3.a Km totales por tipo de servicio de calle
-- 3.b Km totales por tipo de servicio de calle por comuna
-- 4 Tipo inoperatividad
-- 5.a Distribucion km operativos inoperativos
-- 5.b Distribucion km operativos inoperativos por comuna
-- 6.a Distribucion km ciclovias operativos inoperativos
-- 6.b Distribucion km ciclovias operativos inoperativos
-- 7.a Distribucion km tipo inoperatividad
-- 7.b Distribucion km tipo inoperatividad comuna
-- 8.a Distribucion km tipo inoperatividad cruces
-- 8.b Distribucion km tipo inoperatividad cruces comuna
+Based on a 🗺️ shapefile containing the variables shown in Fig. 1, the following list of 📋 tables, 📈 charts, and 🗺️ maps is produced:
 
-### Mapas
+### 📋 Tables
 
-- Mapa calidad decreto
-- Mapa calidad merkuria
-- Mapa calidad normativa
-- Mapa calidad objetivo
+- 1.a  Total kilometers of bike lanes and crossings  
+- 1.b  Total kilometers of bike lanes and crossings by municipality  
+- 2.a  Total kilometers by typology  
+- 2.b  Total kilometers by typology by municipality  
+- 3.a  Total kilometers by type of street service  
+- 3.b  Total kilometers by type of street service by municipality  
+- 4  Type of inoperability  
+- 5.a  Distribution of operational vs. inoperational kilometers  
+- 5.b  Distribution of operational vs. inoperational kilometers by municipality  
+- 6.a  Distribution of operational vs. inoperational bike lane kilometers  
+- 6.b  Distribution of operational vs. inoperational bike lane kilometers by municipality  
+- 7.a  Distribution of kilometers by type of inoperability  
+- 7.b  Distribution of kilometers by type of inoperability by municipality  
+- 8.a  Distribution of kilometers by type of inoperability in crossings  
+- 8.b  Distribution of kilometers by type of inoperability in crossings by municipality  
 
-## Descripción de Funciones Principales
+---
 
-1. **Preparación de datos**
-   - `df <- GetDataReady(df)`: Prepara los datos leyendo un archivo shapefile y generando un archivo CSV con inconsistencias de datos que deben ser revisadas y limpiadas manualmente.
+### 📈 Charts
 
-2. **Estadísticas descriptivas**
-   - `GetBasicAnalysis(df)`: Genera tablas y gráficos estadísticos básicos a partir de los datos del shapefile limpio.
+- 1. Distribution of Crossing Operability Kilometers by Municipality
+- 2. Distribution of Bike Lane Typologies
+- 3. Distribution of Bike Lane Typologies by Municipality
+- 4. Distribution of Typology Kilometers for Bike Lanes
+- 5. Distribution of Typology Kilometers for Bike Lanes by Municipality
+- 6. Distribution of Kilometers by Bike Lane Type
+- 7. Distribution of Kilometers by Bike Lane Type by Municipality
+- 8. Distribution of Operative and Inoperative Kilometers
+- 9. Distribution of Operative and Inoperative Kilometers by Municipality
+- 10. Distribution of Bike Lane Type Kilometers
+- 11. Distribution of Bike Lane Type Kilometers by Municipality
+- 12. Duplicate: Distribution of Bike Lane Type Kilometers by Municipality
+- 13. Distribution of Inoperative Bike Lane Kilometers
+- 14. Distribution of Inoperative Bike Lane Kilometers by Municipality
+- 16. Distribution of Crossing Operability Kilometers
+---
 
-3. **Análisis de Calidad**
-   - `GetQualityAnalysisPaper(df)`: Realiza un análisis de calidad según la norma y genera un mapa correspondiente.
-   - `GetQualityAnalysisPObj(df)`: Realiza un análisis de calidad sin adherirse a la norma y genera un mapa objetivo.
-   - `GetQualityAnalysisMerkuria(df)`: Realiza un análisis de calidad basado en el estándar Merkuria y genera un mapa correspondiente.
-   - `GetQualityDecreto(df)`: Realiza un análisis de calidad basado en el estándar Decreto y genera un mapa correspondiente.
+### 🗺️ Maps
 
-4. **Mapas**
-   - `MapaCalidadNormativa(df)`: Genera un mapa basado en la calidad normativa.
-   - `MapaCalidadObjetivo(df)`: Genera un mapa de calidad objetivo.
-   - `MapaCalidadMerkuria(df)`: Genera un mapa de calidad Merkuria.
+- 1.  Map of quality according to decree 102  
+- 2.  Map of quality according to Merkuria 2012  
+- 3.  Map of quality according to regulations  
+- 4.  Map of porposed quality indicator  
+
+---
+
+## 🛠️ Description of Main Functions
+
+1. **📂 Data Preparation**  
+   - `df <- GetDataReady(df)`: Prepares the data by reading a shapefile 📄 and generating a CSV file with data inconsistencies that must be manually reviewed and cleaned.  
+
+2. **📊 Descriptive Statistics**  
+   - `GetBasicAnalysis(df)`: Generates basic statistical 📋 tables and 📈 charts from the cleaned shapefile data.  
+
+3. **📏 Quality Analysis**  
+   - `GetQualityAnalysisPaper(df)`: Performs a quality analysis based on regulations 📜 and generates a corresponding 🗺️ map.  
+   - `GetQualityAnalysisPObj(df)`: Performs a quality analysis independent of regulations and generates an 🌟 **objective quality map**.  
+   - `GetQualityAnalysisMerkuria(df)`: Performs a quality analysis based on the Merkuria standard 📖 and generates a corresponding 🗺️ map.  
+   - `GetQualityDecreto(df)`: Performs a quality analysis based on the Decree standard 🏛️ and generates a corresponding 🗺️ map.  
+
+4. **🗺️ Maps**  
+   - `MapaCalidadNormativa(df)`: Generates a 🗺️ map based on regulatory quality.  
+   - `MapaCalidadObjetivo(df)`: Generates an 🌟 objective quality map.  
+   - `MapaCalidadMerkuria(df)`: Generates a Merkuria quality map 📖.
+
